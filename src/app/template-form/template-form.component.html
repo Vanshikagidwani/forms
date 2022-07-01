@@ -1,0 +1,24 @@
+<form #profileSubmitForm="ngForm"  (ngSubmit)="onSubmit(profileSubmitForm)">
+
+    <label for="first-name">First Name: </label>
+    <input id="first-name" type="text" [(ngModel)]="profileForm.firstName">
+    <br>
+  
+    <label for="last-name">Last Name: </label>
+    <input id="last-name" type="text" [(ngModel)]="profileForm.lastName">
+
+    <br>
+
+    <label for="gender">Choose a gender:</label>
+
+    <select name="gender" id="gender" [(ngModel)]="profileForm.gender">
+      <option value="Female">Female</option>
+      <option value="Male">Male</option>
+      <option value="Other">Other</option>
+     
+    </select>
+
+    <button type="submit" >Submit</button>
+
+  
+  </form>
